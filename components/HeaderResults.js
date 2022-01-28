@@ -50,7 +50,7 @@ function HeaderResults() {
           </button>
         </form>
         <Avatar
-          className="ml-auto"
+          className="ml-15"
           url="https://media.discordapp.net/attachments/936073527155654696/936360288276611142/unknown.png?width=566&height=566"
         />
       </div>

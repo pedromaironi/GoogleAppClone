@@ -4,7 +4,7 @@ function Avatar({ url }) {
       loading="lazy"
       src={url}
       className="h-10 rounded-full cursor-pointer
-       transition duration-150 transform hover:scale-110"
+       transition duration-150 transform hover:scale-110 ml-auto"
       alt="profile pic"
     />
   );
