@@ -55,7 +55,7 @@ function Google() {
           Google Search
         </buttons>
         <buttons className="btn text-center" onClick={search}>
-          I&apos;m Feeling Lucky
+          I am Feeling Lucky
         </buttons>
       </div>
     </form>
