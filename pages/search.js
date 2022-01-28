@@ -1,13 +1,9 @@
-import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useRef } from "react";
-import Avatar from "../components/Avatar";
 import HeaderResults from "../components/HeaderResults";
+import { config } from "../config";
 
-function Search() {
-
+function Search({ results }) {
+  console.log(results);
   return (
     <div>
       <Head>
@@ -22,3 +18,21 @@ function Search() {
 }
 
 export default Search;
+
+export async function getServerSideProps(context) {
+  const { API_TOKEN, API_CONTEXT } = config;
+  const useDummyData = false;
+  const startIndex = context.query.start || "0";
+
+  const data = useDummyData
+    ? Response
+    : await fetch(
+        `https://www.googleapis.com/customsearch/v1?key=${API_TOKEN}&cx=${API_CONTEXT}&q=${context.query.term}&start=${startIndex}`
+      ).then((response) => response.json());
+
+  return {
+    props: {
+      results: data,
+    },
+  };
+}
