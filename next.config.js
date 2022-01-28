@@ -3,6 +3,6 @@ const withImages = require('next-images')
 
 module.exports = {
   images:{
-    domains:['www.google.com'],
+    domains:['www.google.com', 'media.discordapp.net'],
   } 
 }

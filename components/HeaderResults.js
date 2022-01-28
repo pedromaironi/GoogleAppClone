@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import Avatar from "../components/Avatar";
 
-
 import HeaderOptions from "./HeaderOptions";
 
 function HeaderResults() {
@@ -49,9 +48,14 @@ function HeaderResults() {
             Search
           </button>
         </form>
-        <Avatar
-          className="ml-15"
-          url="https://media.discordapp.net/attachments/936073527155654696/936360288276611142/unknown.png?width=566&height=566"
+        <Image
+          loading="lazy"
+          src="https://media.discordapp.net/attachments/936073527155654696/936360288276611142/unknown.png?width=566&height=566"
+          className="h-10 rounded-full cursor-pointer
+       transition duration-150 transform hover:scale-110 ml-auto"
+          alt="profile pic"
+          width={44}
+          height={44}
         />
       </div>
 
