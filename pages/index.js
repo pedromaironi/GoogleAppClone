@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Avatar from "../components/Avatar";
 import Google from "../components/Google";
 import Footer from "../components/Footer";
 import Header  from "../components/Header";
