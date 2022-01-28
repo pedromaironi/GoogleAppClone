@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderResults from "../components/HeaderResults";
-import { config } from "../config";
+import { config } from "../components/config";
 import Response from "../Response";
 import { useRouter } from "next/router";
 import SearchResults from "../components/SearchResults";
