@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderResults from "../components/HeaderResults";
-// import { config } from "../components/config";
+import { config } from "../components/config";
 import Response from "../Response";
 import { useRouter } from "next/router";
 import SearchResults from "../components/SearchResults";
@@ -28,12 +28,12 @@ export default Search;
 export async function getServerSideProps(context) {
   console.log(context);
 
-  // const { API_TOKEN, API_CONTEXT } = config;
+  const { API_TOKEN, API_CONTEXT } = config;
   const useDummyData = false;
   const startIndex = context.query.start || "0";
 
   const data = useDummyData ? Response: await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=AIzaSyA85IoTi7LUpUH7HAbyRT&cx=${API_CONTEXT}&q=0705e102c5066da39&start=${startIndex}`
+       `https://www.googleapis.com/customsearch/v1?key=AIzaSyA85IoTi7LUpUH7HAbyRT-bndL2hazxSJE&cx=0705e102c5066da39&q=${context.query.term}`
       ).then((response) => response.json());
 
   //After the server has rendered .... Pass the results to the client ...
