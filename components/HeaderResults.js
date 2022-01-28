@@ -27,6 +27,7 @@ function HeaderResults() {
           width={120}
           className="cursor-pointer"
           onClick={() => router.push("/")}
+          alt="Img"
         />
 
         <form
