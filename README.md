@@ -9,6 +9,10 @@ npm run dev
 # or
 yarn dev
 ```
+# Preview
+![image](https://user-images.githubusercontent.com/43529059/151502082-c6984cb5-d752-42b7-9b26-255e2f880d35.png)
+![image](https://user-images.githubusercontent.com/43529059/151502147-d81b2f93-2814-49bc-8d8c-82552e1eb052.png)
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
