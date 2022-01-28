@@ -1,7 +1,7 @@
 import HeaderLeft from "./HeaderLeft";
 import {
   SearchIcon,
-  MapsIcon,
+  MapIcon,
   NewspaperIcon,
   PhotographIcon,
   DotsVerticalIcon,
@@ -18,8 +18,7 @@ function HeaderOptions() {
         <HeaderLeft Icon={PhotographIcon} title="Images" />
         <HeaderLeft Icon={PlayIcon} title="Videos" />
         <HeaderLeft Icon={NewspaperIcon} title="News" />
-        <HeaderLeft Icon={MapsIcon} title="Maps" />
-        <HeaderLeft Icon={DotsVerticalIcon} title="More" />
+        <HeaderLeft Icon={MapIcon} title="Maps" />
       </div>
       {/* Right */}
       <div className="flex space-x-4">

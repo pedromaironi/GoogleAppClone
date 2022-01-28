@@ -15,8 +15,7 @@ function HeaderLeft({ Icon, title, selected }) {
          selected && "text-blue-500 border-blue-500"
        }`}
     >
-      {/* <Icon className="h-4" /> */}
-      <PhotographIcon className="h-4" />
+      <Icon className="h-4"/>
       <p className="hidden sm:inline-flex">{title}</p>
     </div>
   );
