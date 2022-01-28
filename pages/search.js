@@ -29,14 +29,14 @@ export async function getServerSideProps(context) {
   console.log(context);
 
   const { API_TOKEN, API_CONTEXT } = config;
-  const useDummyData = true;
+  const useDummyData = false;
   const startIndex = context.query.start || "0";
 
-  const data = useDummyData
-    ? Response
-    : await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=${API_TOKEN}&cx=${API_CONTEXT}&q=${results.query.term}`
+  const data = useDummyData ? Response: await fetch(
+        `https://www.googleapis.com/customsearch/v1?key=${API_TOKEN}&cx=${API_CONTEXT}&q=${context.query.term}&start=${startIndex}`
       ).then((response) => response.json());
+
+  //After the server has rendered .... Pass the results to the client ...
 
   return {
     props: {
